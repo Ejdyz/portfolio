@@ -25,7 +25,7 @@ if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
 
 // Route to send email
 app.post("/send", async (req, res) => {
-  const { name, email, message, turnstileToken } = req.body;
+  const { name, email, message, subject, turnstileToken } = req.body;
 
   // Verify Cloudflare Turnstile token first
   try {
@@ -59,7 +59,7 @@ app.post("/send", async (req, res) => {
       from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER, // send to yourself
       subject: "New Contact Form Message",
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}\nSubject: ${subject}`,
       replyTo: email, // so you can reply directly
     });
 
