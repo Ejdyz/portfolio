@@ -241,7 +241,7 @@ export function Contact() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full group relative overflow-hidden"
+                      className="w-full group relative overflow-hidden cursor-pointer"
                       disabled={submitting}
                     >
                       <motion.span

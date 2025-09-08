@@ -93,7 +93,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="group relative overflow-hidden"
+              className="group relative overflow-hidden cursor-pointer"
               onClick={() => scrollToAbout()}
             >
               <motion.span

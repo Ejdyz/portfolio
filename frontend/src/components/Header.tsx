@@ -33,7 +33,7 @@ export function Header() {
         <div className="flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-xl font-semibold bg-gradient-to-r from-primary to-chart-1 bg-clip-text text-transparent"
+            className="text-xl font-semibold bg-gradient-to-r from-primary to-chart-1 bg-clip-text text-transparent cursor-pointer"
           >
             Jan Adam
           </motion.div>
@@ -46,7 +46,7 @@ export function Header() {
                 onClick={() => scrollToSection(item.href)}
                 whileHover={{ scale: 1.05, color: 'var(--chart-1)' }}
                 whileTap={{ scale: 0.95 }}
-                className="text-foreground hover:text-chart-1 transition-colors relative"
+                className="text-foreground hover:text--chart-1 transition-colors relative cursor-pointer"
               >
                 {item.name}
                 <motion.div
@@ -90,7 +90,7 @@ export function Header() {
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
                 whileTap={{ scale: 0.95 }}
-                className="block w-full text-left py-2 px-4 text-foreground hover:text-chart-1 hover:bg-accent rounded-md transition-colors"
+                className="block w-full text-left py-2 px-4 text-foreground hover:text-chart-1 hover:bg-accent rounded-md transition-colors cursor-pointer"
               >
                 {item.name}
               </motion.button>
