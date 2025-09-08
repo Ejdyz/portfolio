@@ -1,0 +1,8 @@
+# Sensitive files
+*/.env
+*/credentials.json
+*/token.json
+
+# Node artifacts
+*/node_modules/
+*/npm-debug.log*
