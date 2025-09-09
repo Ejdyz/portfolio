@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /*.map$
+
+Disallow: /send/
+
+Sitemap: https://ejdy.cz/sitemap.xml
