@@ -34,7 +34,7 @@ export function Footer({ onNavigate }: FooterProps) {
               {BUSINESS_INFO.name}
             </h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Full Stack Web Developer &amp; UI/UX Designer.<br />
+              Full Stack webový vývojář &amp; UI/UX designer.<br />
               Zakázkový vývoj moderních webů, frontendových aplikací a digitálních produktů.
             </p>
             <div className="pt-2 text-xs space-y-1 text-muted-foreground/90">
@@ -124,14 +124,14 @@ export function Footer({ onNavigate }: FooterProps) {
             viewport={{ once: true }}
             className="flex items-center space-x-2 text-muted-foreground"
           >
-            <span>Made with</span>
+            <span>Vytvořil s</span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
               <Heart className="h-4 w-4 text-red-500" fill="currentColor" />
             </motion.div>
-            <span>by {BUSINESS_INFO.name}</span>
+            <span>{BUSINESS_INFO.name}</span>
           </motion.div>
 
           <motion.div

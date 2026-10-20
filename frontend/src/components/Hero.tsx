@@ -66,7 +66,7 @@ export function Hero() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="block"
             >
-              Full Stack Developer
+              Full Stack Vývojář
             </motion.span>
             <motion.span
               initial={{ y: 20 }}
@@ -84,8 +84,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.35 }}
           >
-            I create digital experiences that combine beautiful design with powerful functionality. 
-            Passionate about clean code, innovative solutions, and user-centered design.
+            Tvořím moderní webové aplikace, které propojují čistý design se spolehlivou funkčností. 
+            Důraz kladu na udržitelný kód, špičkový výkon a intuitivní uživatelské prostředí.
           </motion.p>
 
           <motion.div
@@ -103,7 +103,7 @@ export function Hero() {
                 className="relative z-10"
                 whileHover={{ scale: 1.05 }}
               >
-                View My Work
+                Prohlédnout projekty
               </motion.span>
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-chart-1 to-chart-2"
@@ -117,7 +117,7 @@ export function Hero() {
               {[
                 { icon: Github, href: 'https://github.com/Ejdyz', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://www.linkedin.com/in/jan-adam-68531b2a3/', label: 'LinkedIn' },
-                { icon: Mail, href: 'mailto:adamhonzikcz@seznam.cz', label: 'Email' },
+                { icon: Mail, href: 'mailto:adamhonzikcz@seznam.cz', label: 'E-mail' },
               ].map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}
@@ -136,7 +136,7 @@ export function Hero() {
 
           <motion.button
             onClick={scrollToAbout}
-            aria-label="Scroll to About section"
+            aria-label="Přejít na sekci O mně"
             className="text-muted-foreground hover:text-chart-1 transition-colors cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

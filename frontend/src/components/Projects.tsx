@@ -7,30 +7,30 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 export function Projects() {
   const projects = [
     {
-      title: 'Weather Station',
-      description: 'A complete weather solution with my own weather station setup, website and server for displaying real-time data.',
+      title: 'Meteostanice (Weather Station)',
+      description: 'Kompletní meteorologické řešení s vlastní hardwarovou stanicí, serverem a webovou aplikací pro zobrazení naměřených dat v reálném čase.',
       image: '/weather-station.webp',
-      tags: ['Next.js', 'Prisma', 'Typescript', 'ShadCN', 'Tailwind'],
-      date: '2023-2025',
+      tags: ['Next.js', 'Prisma', 'TypeScript', 'ShadCN', 'Tailwind'],
+      date: '2023–2025',
       github: 'https://github.com/Ejdyz/weather-station',
       demo: 'https://weather.ejdy.cz',
       featured: true
     },
     {
-      title: 'Yearly Project Management Platform',
-      description: 'Secure web application for students and teachers to manage projects, deadlines, resources marks and defenses effectively.',
+      title: 'Správa ročníkových projektů (SRP)',
+      description: 'Zabezpečená webová aplikace pro studenty a pedagogy pro efektivní správu projektů, termínů, hodnocení a obhajob.',
       image: '/srp-banner.webp',
-      tags: ['KODEXIA', 'Next.js', 'Javascript','Tailwind', 'HeroUI', 'Prisma'],
-      date: '2023-2025',
+      tags: ['KODEXIA', 'Next.js', 'JavaScript', 'Tailwind', 'HeroUI', 'Prisma'],
+      date: '2023–2025',
       github: 'https://github.com/Kodexia',
       demo: 'https://test.srp.spsul.cz',
       featured: true
     },
     {
       title: 'Taskify',
-      description: 'AI-powered task management app that helps users organize their tasks with easy to use application.',
+      description: 'Aplikace pro správu úkolů a osobní produktivitu s přehledným rozhraním a asistencí AI.',
       image: '/taskify.webp',
-      tags: ['Next.js', 'MagicUI', 'Typescript', 'Tailwind'],
+      tags: ['Next.js', 'MagicUI', 'TypeScript', 'Tailwind'],
       date: '2025',
       github: 'https://github.com/Ejdyz/Taskify',
       demo: 'https://taskify.ejdy.cz',
@@ -38,17 +38,17 @@ export function Projects() {
     },
     {
       title: 'QuiznFun',
-      description: 'Fun quiz application with a variety of quiz categories made for teachers in schools to make learning more engaging.',
+      description: 'Zábavná a interaktivní kvízová aplikace s kategoriemi vytvořená pro podporu výuky ve školách.',
       image: '/quiznfun.webp',
-      tags: ['Next.js', 'Typescript', 'HeroUI', 'PostgreSQL'],
+      tags: ['Next.js', 'TypeScript', 'HeroUI', 'PostgreSQL'],
       date: '2023',
       github: 'https://github.com/Kodexia/QuiznFun',
       demo: 'https://quiznfun.ejdy.cz',
       featured: false
     },
     {
-      title: 'Panema S.R.O Website',
-      description: 'Corporate website for Panema S.R.O, showcasing their services.',
+      title: 'Panema s.r.o. – Firemní web',
+      description: 'Kompletní návrh firemního webu a design systému ve Figmě pro společnost Panema s.r.o.',
       image: '/panema.webp',
       tags: ['Figma'],
       date: '2025',
@@ -71,11 +71,11 @@ export function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            Featured Projects
+            Vybrané projekty
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Here are some of my favorite projects that showcase my skills in 
-            front-end development, UI/UX design, and problem-solving.
+            Ukázka projektů, na kterých demonstruji své zkušenosti s vývojem moderních webových aplikací, 
+            UI/UX designem a řešením praktických úloh.
           </p>
         </motion.div>
 
@@ -173,13 +173,13 @@ export function Projects() {
                     <Button variant="outline" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
-                        Code
+                        Zdrojový kód
                       </a>
                     </Button>
                     <Button asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
+                        Živé demo
                       </a>
                     </Button>
                   </div>
@@ -196,7 +196,7 @@ export function Projects() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl md:text-3xl text-center mb-12">Other Projects</h3>
+          <h3 className="text-2xl md:text-3xl text-center mb-12">Další projekty</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherProjects.map((project, index) => (
               <motion.div
@@ -265,7 +265,7 @@ export function Projects() {
                       ))}
                       {project.tags.length > 3 && (
                         <span className="text-xs text-muted-foreground px-2 py-1">
-                          +{project.tags.length - 3} more
+                          +{project.tags.length - 3} dalších
                         </span>
                       )}
                     </div>

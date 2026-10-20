@@ -6,10 +6,10 @@ export function About() {
   const skills = [
     {
       category: 'Frontend',
-      items: ['Next.js','React', 'TypeScript', 'Tailwind CSS']
+      items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS']
     },
     {
-      category: 'Tools',
+      category: 'Nástroje',
       items: ['Git', 'Linux', 'Figma', 'Vercel']
     }
   ];
@@ -17,23 +17,23 @@ export function About() {
   const highlights = [
     {
       icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable, and efficient code that follows best practices.'
+      title: 'Čistý kód',
+      description: 'Psaní udržitelného, škálovatelného a efektivního kódu podle moderních standardů.'
     },
     {
       icon: Palette,
-      title: 'Design Focus',
-      description: 'Creating beautiful, intuitive interfaces that enhance user experience.'
+      title: 'Důraz na design',
+      description: 'Tvorba estetických a přehledných rozhraní, která přináší skvělý uživatelský zážitek.'
     },
     {
       icon: Zap,
-      title: 'Performance',
-      description: 'Optimizing applications for speed, accessibility, and responsive design.'
+      title: 'Rychlost & Výkon',
+      description: 'Optimalizace rychlosti načítání, přístupnosti (WCAG) a plynulého zobrazení na všech zařízeních.'
     },
     {
       icon: Users,
-      title: 'Collaboration',
-      description: 'Working effectively in teams and communicating complex ideas clearly.'
+      title: 'Spolupráce',
+      description: 'Otevřená a spolehlivá komunikace, schopnost srozumitelně vysvětlit technická řešení.'
     }
   ];
 
@@ -48,11 +48,11 @@ export function About() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            About Me
+            O mně
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate developer with {new Date().getFullYear() - 2022} years of experience creating digital solutions
-            that matter. I love turning complex problems into simple, beautiful, and intuitive designs.
+            Jsem vývojář se zápalem pro moderní technologie a design s {new Date().getFullYear() - 2022} lety zkušeností s tvorbou webů. 
+            Rád proměňuji složité problémy v jednoduchá, estetická a intuitivní řešení.
           </p>
         </motion.div>
 
@@ -63,14 +63,14 @@ export function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl mb-6">My Journey</h3>
+            <h3 className="text-2xl mb-6">Moje cesta</h3>
             <p className="text-muted-foreground mb-6">
-              Started as a curious kid who loved computers, I've evolved into a frontend developer 
-              who bridges the gap between design and functionality. I believe in creating experiences 
-              that not only look great but also solve real problems.
+              K programování mě přivedla zvědavost a zájem o technologie. Postupně jsem vyrostl ve vývojáře, 
+              který propojuje technický svět kódu s funkčním designem. Věřím v tvorbu řešení, 
+              která nejen skvěle vypadají, ale především spolehlivě fungují a řeší skutečné potřeby uživatelů.
             </p>
             <p className="text-muted-foreground">
-              When I'm not coding, you'll find me exploring new technologies, tinkering with hardware and 3D printing, or managing my home lab server.
+              Když zrovna nekóduji, věnuji se objevování nových technologií, bastlení s hardwarem a 3D tiskem nebo správě vlastního domácího serveru.
             </p>
           </motion.div>
 
@@ -107,7 +107,7 @@ export function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl text-center mb-8">Skills & Technologies</h3>
+          <h3 className="text-2xl text-center mb-8">Dovednosti &amp; Technologie</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {skills.map((skillGroup, index) => (
               <motion.div

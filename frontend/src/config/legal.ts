@@ -4,7 +4,7 @@
  */
 export const BUSINESS_INFO = {
   name: 'Jan Adam',
-  tradeName: 'Jan Adam – Full Stack Web Developer & UI/UX Designer',
+  tradeName: 'Jan Adam – Vývoj webových aplikací & UI/UX design',
   // IČO: doplňte své reálné IČO po zápisu v živnostenském rejstříku
   ico: '22628037', 
   // Sídlo / místo podnikání zapsané v živnostenském rejstříku

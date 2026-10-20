@@ -1,24 +1,25 @@
-# Jan Adam – Full Stack Web Developer & UI/UX Designer
+# Jan Adam – Vývoj webových aplikací & UI/UX design
 
 > Profesionální vývoj moderních webových aplikací a zakázkový frontendový vývoj s důrazem na čistý kód, špičkový výkon a moderní UI/UX design.
 
-## Core Information
-- [Jan Adam Portfolio](https://ejdy.cz/): Hlavní webové portfolio full-stack vývojáře Jana Adama.
-- [GitHub Profile](https://github.com/Ejdyz): Profil se zdrojovými kódy veřejných open-source projektů.
-- [LinkedIn Profile](https://www.linkedin.com/in/jan-adam-68531b2a3/): Profesní profil Jana Adama.
-- [E-mail Contact](mailto:adamhonzikcz@seznam.cz): Přímý e-mailový kontakt pro poptávky a spolupráci.
+## Základní informace
+- [Jan Adam – Portfolio](https://ejdy.cz/): Hlavní webové portfolio full-stack vývojáře Jana Adama.
+- [GitHub profil](https://github.com/Ejdyz): Profil se zdrojovými kódy veřejných open-source projektů.
+- [LinkedIn profil](https://www.linkedin.com/in/jan-adam-68531b2a3/): Profesní profil Jana Adama.
+- [E-mailový kontakt](mailto:adamhonzikcz@seznam.cz): Přímý e-mailový kontakt pro poptávky a spolupráci.
 
-## Projects and References
-- [Weather Station](https://weather.ejdy.cz): Kompletní meteorologické řešení s vlastní hardwarovou stanicí a real-time webovou aplikací (Next.js, Prisma, TypeScript, Tailwind CSS).
-- [Yearly Project Management Platform (SRP)](https://test.srp.spsul.cz): Zabezpečená webová platforma pro správu studentských ročníkových projektů (Next.js, Prisma, HeroUI).
-- [Taskify](https://taskify.ejdy.cz): AI-powered aplikace pro správu úkolů a produktivitu (Next.js, MagicUI, TypeScript, Tailwind CSS).
+## Projekty a reference
+- [Meteostanice (Weather Station)](https://weather.ejdy.cz): Kompletní meteorologické řešení s vlastní hardwarovou stanicí a real-time webovou aplikací (Next.js, Prisma, TypeScript, Tailwind CSS).
+- [Systém správy ročníkových projektů (SRP)](https://test.srp.spsul.cz): Zabezpečená webová platforma pro správu studentských ročníkových projektů (Next.js, Prisma, HeroUI).
+- [Taskify](https://taskify.ejdy.cz): Aplikace pro správu úkolů a produktivitu s asistencí umělé inteligence (Next.js, MagicUI, TypeScript, Tailwind CSS).
 - [QuiznFun](https://quiznfun.ejdy.cz): Školní interaktivní kvízová aplikace s kategoriemi (Next.js, TypeScript, HeroUI, PostgreSQL).
-- [Panema UI/UX Design](https://ejdy.cz/#projekty): Kompletní návrh firemního webu a design systému ve Figmě.
+- [Panema s.r.o. – UI/UX Design](https://ejdy.cz/#projekty): Kompletní návrh firemního webu a design systému ve Figmě.
 
-## Legal and Compliance
+## Právní informace a podmínky
 - [Ochrana osobních údajů](https://ejdy.cz/ochrana-osobnich-udaju): Informace o zpracování osobních údajů v souladu s GDPR a zákonem č. 110/2019 Sb.
 - [Obchodní podmínky](https://ejdy.cz/obchodni-podminky): Všeobecné obchodní podmínky pro poskytování IT služeb a vývoj softwaru na míru.
 
-## Optional
-- [Sitemap](https://ejdy.cz/sitemap.xml): XML mapa webových stránek.
-- [Robots.txt](https://ejdy.cz/robots.txt): Konfigurační soubor pro vyhledávací a AI roboty.
+## Doplňující odkazy
+- [Mapa stránek (Sitemap)](https://ejdy.cz/sitemap.xml): XML mapa webových stránek.
+- [Konfigurace robotů (Robots.txt)](https://ejdy.cz/robots.txt): Pravidla pro vyhledávací a AI roboty.
+- [Katalog AI zdrojů (AI Catalog)](https://ejdy.cz/.well-known/ai-catalog.json): Manifest dle specifikace Agentic Resource Discovery (ARD).

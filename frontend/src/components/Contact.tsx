@@ -64,7 +64,7 @@ export function Contact() {
     // Handle form submission here
     console.log('Form submitted:', formData);
     if (!turnstileToken) {
-      toast.error('Please complete captcha first.');
+      toast.error('Před odesláním prosím potvrďte ověření (captcha).');
       return;
     }
     setSubmitting(true);
@@ -83,16 +83,16 @@ export function Contact() {
       });
       const result = await res.json();
       if (res.ok) {
-        toast.success(result.message || 'Message sent successfully');
+        toast.success(result.message || 'Zpráva byla úspěšně odeslána!');
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTurnstileToken(undefined);
         renderedRef.current = false; // force re-render captcha
       } else {
-        toast.error(result.message || 'Error sending message');
+        toast.error(result.message || 'Chyba při odesílání zprávy.');
       }
     } catch (err) {
       console.error(err);
-      toast.error('Network error. Please try again later.');
+      toast.error('Chyba sítě. Zkuste to prosím později.');
     } finally {
       setSubmitting(false);
     }
@@ -108,14 +108,14 @@ export function Contact() {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
+      title: 'E-mail',
       value: 'adamhonzikcz@seznam.cz',
       href: 'mailto:adamhonzikcz@seznam.cz'
     },
     {
       icon: MapPin,
-      title: 'Location',
-      value: 'Czech Republic',
+      title: 'Lokalita',
+      value: 'Česká republika',
       href: '#'
     }
   ];
@@ -146,11 +146,11 @@ export function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl mb-6">
-            Get In Touch
+            Napište mi
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I'm always interested in new opportunities and exciting projects. 
-            Whether you have a question or just want to say hi, feel free to reach out!
+            Máte nápad na projekt, potřebujete vytvořit web nebo hledáte vývojáře na spolupráci? 
+            Neváhejte se mi ozvat prostřednictvím formuláře nebo přímo e-mailem!
           </p>
         </motion.div>
 
@@ -164,7 +164,7 @@ export function Contact() {
           >
             <Card className="p-8">
               <CardContent className="p-0">
-                <h3 className="text-2xl mb-6">Send me a message</h3>
+                <h3 className="text-2xl mb-6">Pošlete mi zprávu</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <motion.div
@@ -174,7 +174,7 @@ export function Contact() {
                       <Input
                         type="text"
                         name="name"
-                        placeholder="Your Name"
+                        placeholder="Vaše jméno"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -188,7 +188,7 @@ export function Contact() {
                       <Input
                         type="email"
                         name="email"
-                        placeholder="Your Email"
+                        placeholder="Váš e-mail"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -204,7 +204,7 @@ export function Contact() {
                     <Input
                       type="text"
                       name="subject"
-                      placeholder="Subject"
+                      placeholder="Předmět zprávy"
                       value={formData.subject}
                       onChange={handleChange}
                       required
@@ -218,7 +218,7 @@ export function Contact() {
                   >
                     <Textarea
                       name="message"
-                      placeholder="Your Message"
+                      placeholder="Vaše zpráva"
                       value={formData.message}
                       onChange={handleChange}
                       required
@@ -230,7 +230,7 @@ export function Contact() {
                   <div className="my-4">
                     <div id="turnstile-widget" className="my-4 w-full flex justify-center" />
                     {captchaError && (
-                      <p className="text-xs text-red-500 mt-2">Captcha error. <button type="button" className="underline" onClick={() => { setCaptchaError(false); setTurnstileToken(undefined); renderedRef.current = false; }}>Retry</button></p>
+                      <p className="text-xs text-red-500 mt-2">Chyba ověření. <button type="button" className="underline cursor-pointer" onClick={() => { setCaptchaError(false); setTurnstileToken(undefined); renderedRef.current = false; }}>Zkusit znovu</button></p>
                     )}
                   </div>
                   
@@ -248,7 +248,7 @@ export function Contact() {
                         className="relative z-10 flex items-center justify-center"
                       >
                         <Send className="h-4 w-4 mr-2" />
-                        {submitting ? 'Sending...' : 'Send Message'}
+                        {submitting ? 'Odesílám...' : 'Odeslat zprávu'}
                       </motion.span>
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-chart-1 to-chart-2"
@@ -272,7 +272,7 @@ export function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl mb-6">Contact Information</h3>
+              <h3 className="text-2xl mb-6">Kontaktní údaje</h3>
               <div className="space-y-4">
                 {contactInfo.map((info) => (
                   <motion.a
@@ -295,7 +295,7 @@ export function Contact() {
             </div>
 
             <div>
-              <h4 className="text-xl mb-4">Follow Me</h4>
+              <h4 className="text-xl mb-4">Sociální sítě &amp; profily</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <motion.a
@@ -316,10 +316,10 @@ export function Contact() {
 
             <Card className="p-6 bg-gradient-to-br from-chart-1/10 to-chart-2/10 border-chart-1/20">
               <CardContent className="p-0">
-                <h4 className="text-xl mb-3 text-chart-1">Let's work together!</h4>
+                <h4 className="text-xl mb-3 text-chart-1">Pojďme spolupracovat!</h4>
                 <p className="text-muted-foreground">
-                  I'm currently available for freelance work. 
-                  Let's discuss how we can bring your ideas to life.
+                  Jsem otevřen novým projektům a zakázkové spolupráci. 
+                  Rád s vámi zkonzultuji vaše představy a pomohu je uvést v život.
                 </p>
               </CardContent>
             </Card>

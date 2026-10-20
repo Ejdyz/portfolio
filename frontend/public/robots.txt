@@ -1,11 +1,11 @@
-# robots.txt for https://ejdy.cz
+# robots.txt pro https://ejdy.cz
 
 User-agent: *
 Allow: /
 Disallow: /*.map$
 Disallow: /send/
 
-# Explicitly allow AI search crawlers for GEO / AEO citation
+# Explicitní povolení AI a vyhledávacích crawlerů pro GEO / AEO citace
 User-agent: GPTBot
 Allow: /
 
@@ -24,6 +24,8 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# Sitemaps & LLM Context
+# Sitemapy, ARD manifest a LLM kontext
 Sitemap: https://ejdy.cz/sitemap.xml
-# LLM Context: https://ejdy.cz/llms.txt
+# LLM kontext: https://ejdy.cz/llms.txt
+# Agentic Resource Discovery (ARD): https://ejdy.cz/.well-known/ai-catalog.json
+Agentmap: https://ejdy.cz/.well-known/ai-catalog.json
