@@ -2,6 +2,17 @@ import { motion } from 'motion/react';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 
+const PARTICLES = [
+  { left: '10%', top: '20%', delay: '0s', duration: '6s' },
+  { left: '25%', top: '75%', delay: '1.2s', duration: '8s' },
+  { left: '40%', top: '15%', delay: '2.5s', duration: '7s' },
+  { left: '55%', top: '85%', delay: '0.8s', duration: '9s' },
+  { left: '70%', top: '30%', delay: '3.1s', duration: '6.5s' },
+  { left: '85%', top: '65%', delay: '1.8s', duration: '7.5s' },
+  { left: '90%', top: '10%', delay: '4s', duration: '8.5s' },
+  { left: '15%', top: '50%', delay: '2.1s', duration: '6.8s' },
+];
+
 export function Hero() {
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -12,25 +23,17 @@ export function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
+      {/* Lightweight CSS animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        {PARTICLES.map((particle, i) => (
+          <div
             key={i}
-            className="absolute w-2 h-2 bg-chart-1/20 rounded-full"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -100, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
+            className="hero-particle absolute w-2 h-2 bg-chart-1/25 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: particle.left,
+              top: particle.top,
+              animationDelay: particle.delay,
+              animationDuration: particle.duration,
             }}
           />
         ))}
@@ -38,15 +41,15 @@ export function Hero() {
 
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.5 }}
         >
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-foreground via-chart-1 to-chart-2 bg-clip-text text-transparent"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            className="text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-foreground via-chart-1 to-chart-2 bg-clip-text text-transparent font-bold tracking-tight"
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
             Jan Adam
           </motion.h1>
@@ -55,20 +58,20 @@ export function Hero() {
             className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
           >
             <motion.span
-              initial={{ y: 100 }}
+              initial={{ y: 20 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className="block"
             >
               Full Stack Developer
             </motion.span>
             <motion.span
-              initial={{ y: 100 }}
+              initial={{ y: 20 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
               className="block text-chart-1"
             >
               & UI/UX Designer
@@ -77,9 +80,9 @@ export function Hero() {
 
           <motion.p
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            transition={{ duration: 0.4, delay: 0.35 }}
           >
             I create digital experiences that combine beautiful design with powerful functionality. 
             Passionate about clean code, innovative solutions, and user-centered design.
@@ -87,9 +90,9 @@ export function Hero() {
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.6 }}
+            transition={{ duration: 0.4, delay: 0.45 }}
           >
             <Button
               size="lg"
@@ -133,10 +136,11 @@ export function Hero() {
 
           <motion.button
             onClick={scrollToAbout}
-            className="text-muted-foreground hover:text-chart-1 transition-colors"
+            aria-label="Scroll to About section"
+            className="text-muted-foreground hover:text-chart-1 transition-colors cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 2 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
             whileHover={{ y: -5 }}
           >
             <motion.div

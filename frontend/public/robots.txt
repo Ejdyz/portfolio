@@ -1,8 +1,29 @@
+# robots.txt for https://ejdy.cz
+
 User-agent: *
 Allow: /
-
 Disallow: /*.map$
-
 Disallow: /send/
 
+# Explicitly allow AI search crawlers for GEO / AEO citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemaps & LLM Context
 Sitemap: https://ejdy.cz/sitemap.xml
+# LLM Context: https://ejdy.cz/llms.txt

@@ -6,11 +6,16 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { useState, useEffect, useRef } from 'react';
 import { toast } from 'sonner';
+import { BUSINESS_INFO } from '../config/legal';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare global { interface Window { turnstile?: any; } }
 
-export function Contact() {
+interface ContactProps {
+  onNavigate?: (path: string) => void;
+}
+
+export function Contact({ onNavigate }: ContactProps = {}) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -109,13 +114,13 @@ export function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'adamhonzikcz@seznam.cz',
-      href: 'mailto:adamhonzikcz@seznam.cz'
+      value: BUSINESS_INFO.email,
+      href: `mailto:${BUSINESS_INFO.email}`
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Czech Republic',
+      value: BUSINESS_INFO.country,
       href: '#'
     }
   ];
@@ -124,13 +129,13 @@ export function Contact() {
     {
       icon: Github,
       name: 'GitHub',
-      href: 'https://github.com/Ejdyz',
+      href: BUSINESS_INFO.github,
       color: 'hover:text-gray-900 dark:hover:text-white'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/jan-adam-68531b2a3/',
+      href: BUSINESS_INFO.linkedin,
       color: 'hover:text-blue-600'
     }
   ];
@@ -171,10 +176,15 @@ export function Contact() {
                       whileFocus={{ scale: 1.02 }}
                       transition={{ duration: 0.2 }}
                     >
+                      <label htmlFor="contact-name" className="sr-only">
+                        Your Name
+                      </label>
                       <Input
+                        id="contact-name"
                         type="text"
                         name="name"
                         placeholder="Your Name"
+                        aria-label="Your Name"
                         value={formData.name}
                         onChange={handleChange}
                         required
@@ -185,10 +195,15 @@ export function Contact() {
                       whileFocus={{ scale: 1.02 }}
                       transition={{ duration: 0.2 }}
                     >
+                      <label htmlFor="contact-email" className="sr-only">
+                        Your Email
+                      </label>
                       <Input
+                        id="contact-email"
                         type="email"
                         name="email"
                         placeholder="Your Email"
+                        aria-label="Your Email"
                         value={formData.email}
                         onChange={handleChange}
                         required
@@ -201,10 +216,15 @@ export function Contact() {
                     whileFocus={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
+                    <label htmlFor="contact-subject" className="sr-only">
+                      Subject
+                    </label>
                     <Input
+                      id="contact-subject"
                       type="text"
                       name="subject"
                       placeholder="Subject"
+                      aria-label="Subject"
                       value={formData.subject}
                       onChange={handleChange}
                       required
@@ -216,9 +236,14 @@ export function Contact() {
                     whileFocus={{ scale: 1.02 }}
                     transition={{ duration: 0.2 }}
                   >
+                    <label htmlFor="contact-message" className="sr-only">
+                      Your Message
+                    </label>
                     <Textarea
+                      id="contact-message"
                       name="message"
                       placeholder="Your Message"
+                      aria-label="Your Message"
                       value={formData.message}
                       onChange={handleChange}
                       required
@@ -258,6 +283,25 @@ export function Contact() {
                       />
                     </Button>
                   </motion.div>
+
+                  {/* Legal Notice dle GDPR a cz-web-legislativa */}
+                  <p className="text-xs text-muted-foreground text-center pt-2 leading-relaxed">
+                    Odesláním formuláře berete na vědomí{' '}
+                    <a
+                      href="/ochrana-osobnich-udaju"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (onNavigate) {
+                          onNavigate('/ochrana-osobnich-udaju');
+                        } else {
+                          window.location.pathname = '/ochrana-osobnich-udaju';
+                        }
+                      }}
+                      className="text-chart-1 underline underline-offset-2 hover:text-chart-2 transition-colors cursor-pointer"
+                    >
+                      Zásady zpracování osobních údajů &amp; cookies
+                    </a>.
+                  </p>
                 </form>
               </CardContent>
             </Card>

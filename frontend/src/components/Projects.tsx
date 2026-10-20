@@ -9,7 +9,7 @@ export function Projects() {
     {
       title: 'Weather Station',
       description: 'A complete weather solution with my own weather station setup, website and server for displaying real-time data.',
-      image: '/weather-station.png',
+      image: '/weather-station.webp',
       tags: ['Next.js', 'Prisma', 'Typescript', 'ShadCN', 'Tailwind'],
       date: '2023-2025',
       github: 'https://github.com/Ejdyz/weather-station',
@@ -19,7 +19,7 @@ export function Projects() {
     {
       title: 'Yearly Project Management Platform',
       description: 'Secure web application for students and teachers to manage projects, deadlines, resources marks and defenses effectively.',
-      image: '/srp-banner.png',
+      image: '/srp-banner.webp',
       tags: ['KODEXIA', 'Next.js', 'Javascript','Tailwind', 'HeroUI', 'Prisma'],
       date: '2023-2025',
       github: 'https://github.com/Kodexia',
@@ -29,7 +29,7 @@ export function Projects() {
     {
       title: 'Taskify',
       description: 'AI-powered task management app that helps users organize their tasks with easy to use application.',
-      image: '/taskify.png',
+      image: '/taskify.webp',
       tags: ['Next.js', 'MagicUI', 'Typescript', 'Tailwind'],
       date: '2025',
       github: 'https://github.com/Ejdyz/Taskify',
@@ -39,7 +39,7 @@ export function Projects() {
     {
       title: 'QuiznFun',
       description: 'Fun quiz application with a variety of quiz categories made for teachers in schools to make learning more engaging.',
-      image: '/quiznfun.png',
+      image: '/quiznfun.webp',
       tags: ['Next.js', 'Typescript', 'HeroUI', 'PostgreSQL'],
       date: '2023',
       github: 'https://github.com/Kodexia/QuiznFun',
@@ -49,7 +49,7 @@ export function Projects() {
     {
       title: 'Panema S.R.O Website',
       description: 'Corporate website for Panema S.R.O, showcasing their services.',
-      image: '/panema.png',
+      image: '/panema.webp',
       tags: ['Figma'],
       date: '2025',
       figma: 'https://www.figma.com/design/gCANvkrGiDLePUV8zXYxIH/Panema-V2?node-id=0-1&t=1ZLLlyt3DdVwHmnK-1',
@@ -102,6 +102,8 @@ export function Projects() {
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}
+                      width={800}
+                      height={450}
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110 rounded-md"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -109,21 +111,21 @@ export function Projects() {
                       <div className="flex space-x-2">
                          {project.figma && (
                             <Button size="sm" variant="secondary" asChild>
-                              <a href={project.figma} target="_blank" rel="noopener noreferrer">
+                              <a href={project.figma} target="_blank" rel="noopener noreferrer" aria-label={`Figma design pro ${project.title}`}>
                                 <Figma className="h-4 w-4" />
                               </a>
                             </Button>
                           )}
                           {project.github && (
                             <Button size="sm" variant="secondary" asChild>
-                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                              <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`GitHub repozitář pro ${project.title}`}>
                                 <Github className="h-4 w-4" />
                               </a>
                             </Button>
                           )}
                           {project.demo && (
                           <Button size="sm" variant="secondary" asChild>
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`Živé demo pro ${project.title}`}>
                               <ExternalLink className="h-4 w-4" />
                             </a>
                           </Button>
@@ -210,27 +212,29 @@ export function Projects() {
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}
+                      width={600}
+                      height={350}
                       className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105 rounded-t-xl hover:rounded-t-xl"
                     />
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex space-x-2">
                         {project.figma && (
                             <Button size="sm" variant="secondary" asChild>
-                              <a href={project.figma} target="_blank" rel="noopener noreferrer">
+                              <a href={project.figma} target="_blank" rel="noopener noreferrer" aria-label={`Figma návrh pro ${project.title}`}>
                                 <Figma className="h-4 w-4" />
                               </a>
                             </Button>
                           )}
                           {project.github && (
                             <Button size="sm" variant="secondary" asChild>
-                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                              <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`GitHub repozitář pro ${project.title}`}>
                                 <Github className="h-4 w-4" />
                               </a>
                             </Button>
                           )}
                           {project.demo && (
                           <Button size="sm" variant="secondary" asChild>
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`Živé demo pro ${project.title}`}>
                               <ExternalLink className="h-4 w-4" />
                             </a>
                           </Button>

@@ -4,7 +4,12 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { ThemeToggle } from './ThemeToggle';
 
-export function Header() {
+interface HeaderProps {
+  onNavigate?: (path: string) => void;
+  isSubpage?: boolean;
+}
+
+export function Header({ onNavigate, isSubpage = false }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -14,12 +19,27 @@ export function Header() {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const scrollToSection = (href: string) => {
+  const handleNavClick = (href: string) => {
+    setIsMenuOpen(false);
+    if (isSubpage) {
+      if (onNavigate) {
+        onNavigate('/');
+      }
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }, 50);
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -33,20 +53,21 @@ export function Header() {
         <div className="flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.05 }}
+            onClick={() => handleNavClick('#home')}
             className="text-xl font-semibold bg-gradient-to-r from-primary to-chart-1 bg-clip-text text-transparent cursor-pointer"
           >
             Jan Adam
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8" aria-label="Hlavní navigace">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item.href)}
                 whileHover={{ scale: 1.05, color: 'var(--chart-1)' }}
                 whileTap={{ scale: 0.95 }}
-                className="text-foreground hover:text--chart-1 transition-colors relative cursor-pointer"
+                className="text-foreground hover:text-chart-1 transition-colors relative cursor-pointer"
               >
                 {item.name}
                 <motion.div
@@ -66,8 +87,9 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden cursor-pointer"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Zavřít menu" : "Otevřít menu"}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -83,12 +105,13 @@ export function Header() {
           }}
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden"
+          aria-label="Mobilní navigace"
         >
           <div className="pt-4 pb-2 space-y-2">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item.href)}
                 whileTap={{ scale: 0.95 }}
                 className="block w-full text-left py-2 px-4 text-foreground hover:text-chart-1 hover:bg-accent rounded-md transition-colors cursor-pointer"
               >

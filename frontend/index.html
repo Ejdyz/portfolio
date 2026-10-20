@@ -1,15 +1,117 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="description" content="Jan Adam's portfolio showcasing projects and skills." />
+    <meta name="theme-color" content="#030213" />
+
+    <!-- SEO Meta Tags -->
+    <title>Jan Adam | Full Stack Web Developer &amp; UI/UX Designer | Zakázkový vývoj webů</title>
+    <meta
+      name="description"
+      content="Zakázkový vývoj moderních webových aplikací a intuitivní UI/UX design. Specializace na React, Next.js, TypeScript a čistý kód. Prohlédněte si reference a kontaktujte mě (ejdy.cz)."
+    />
+    <meta
+      name="keywords"
+      content="Jan Adam, ejdy, web developer, frontend developer, tvorba webu, vývoj webových aplikací, UI/UX designer, React vývojář, Next.js, TypeScript, freelance programátor, portfolio, zakázkový vývoj webů, správa webu"
+    />
+    <meta name="author" content="Jan Adam" />
     <link rel="canonical" href="https://ejdy.cz/" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
-    <title>Jan Adam</title>
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Context" />
+
+    <!-- Crawlers & Bots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Discord, Slack) -->
+    <meta property="og:site_name" content="Jan Adam – Portfolio" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Jan Adam | Full Stack Web Developer &amp; UI/UX Designer" />
+    <meta
+      property="og:description"
+      content="Zakázkový vývoj moderních webových aplikací a intuitivní UI/UX design na míru. React, Next.js a čistý kód."
+    />
+    <meta property="og:url" content="https://ejdy.cz/" />
+    <meta property="og:image" content="https://ejdy.cz/weather-station.png" />
+    <meta property="og:image:alt" content="Jan Adam – Full Stack Web Developer &amp; UI/UX Designer" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jan Adam | Full Stack Web Developer &amp; UI/UX Designer" />
+    <meta
+      name="twitter:description"
+      content="Zakázkový vývoj moderních webových aplikací a intuitivní UI/UX design na míru. React, Next.js a čistý kód."
+    />
+    <meta name="twitter:image" content="https://ejdy.cz/weather-station.png" />
+    <meta name="twitter:image:alt" content="Jan Adam – Portfolio" />
+
+    <!-- Structured Data (JSON-LD) for Google Knowledge Graph, Rich Snippets and AI Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://ejdy.cz/#person",
+          "name": "Jan Adam",
+          "alternateName": ["Ejdy", "Jan Adam Developer"],
+          "url": "https://ejdy.cz",
+          "jobTitle": "Full Stack Web Developer & UI/UX Designer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+          },
+          "sameAs": [
+            "https://github.com/Ejdyz",
+            "https://www.linkedin.com/in/jan-adam-68531b2a3/"
+          ],
+          "knowsAbout": [
+            "Web Development",
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Tailwind CSS",
+            "UI/UX Design",
+            "Node.js",
+            "Frontend Architecture"
+          ],
+          "email": "mailto:adamhonzikcz@seznam.cz"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://ejdy.cz/#website",
+          "url": "https://ejdy.cz",
+          "name": "Jan Adam – Portfolio & Web Development",
+          "description": "Zakázkový vývoj moderních webových aplikací a UI/UX design.",
+          "publisher": {
+            "@id": "https://ejdy.cz/#person"
+          },
+          "inLanguage": ["cs", "en"]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://ejdy.cz/#service",
+          "name": "Jan Adam – Zakázkový vývoj webů a UI/UX design",
+          "url": "https://ejdy.cz",
+          "image": "https://ejdy.cz/weather-station.png",
+          "priceRange": "$$",
+          "email": "adamhonzikcz@seznam.cz",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CZ"
+          },
+          "founder": {
+            "@id": "https://ejdy.cz/#person"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

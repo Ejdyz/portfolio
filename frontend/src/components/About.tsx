@@ -81,7 +81,7 @@ export function About() {
             viewport={{ once: true }}
             className="grid grid-cols-2 gap-4"
           >
-            {highlights.map((highlight, index) => (
+            {highlights.map((highlight) => (
               <motion.div
                 key={highlight.title}
                 whileHover={{ scale: 1.05, rotate: 1 }}
