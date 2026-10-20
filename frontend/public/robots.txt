@@ -1,4 +1,4 @@
-# robots.txt pro https://ejdy.cz
+# robots.txt pro https://jan-adam.cz
 
 User-agent: *
 Allow: /
@@ -25,7 +25,6 @@ User-agent: anthropic-ai
 Allow: /
 
 # Sitemapy, ARD manifest a LLM kontext
-Sitemap: https://ejdy.cz/sitemap.xml
-# LLM kontext: https://ejdy.cz/llms.txt
-# Agentic Resource Discovery (ARD): https://ejdy.cz/.well-known/ai-catalog.json
-Agentmap: https://ejdy.cz/.well-known/ai-catalog.json
+Sitemap: https://jan-adam.cz/sitemap.xml
+# LLM kontext: https://jan-adam.cz/llms.txt
+# Agentic Resource Discovery (ARD): https://jan-adam.cz/.well-known/ai-catalog.json

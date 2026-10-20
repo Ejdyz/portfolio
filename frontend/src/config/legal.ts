@@ -15,8 +15,8 @@ export const BUSINESS_INFO = {
   vatStatus: 'Nejsem plátce DPH',
   email: 'admin@ejdy.cz',
   phone: '', // Volitelné telefonní číslo
-  domain: 'https://ejdy.cz',
-  website: 'ejdy.cz',
+  domain: 'https://jan-adam.cz',
+  website: 'jan-adam.cz',
   country: 'Česká republika',
   github: 'https://github.com/Ejdyz',
   linkedin: 'https://www.linkedin.com/in/jan-adam-68531b2a3/',

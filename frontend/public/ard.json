@@ -2,16 +2,16 @@
   "specVersion": "1.0",
   "host": {
     "displayName": "Jan Adam – Vývoj webových aplikací & UI/UX design",
-    "identifier": "https://ejdy.cz",
-    "documentationUrl": "https://ejdy.cz/llms.txt",
-    "logoUrl": "https://ejdy.cz/logo.svg"
+    "identifier": "https://jan-adam.cz",
+    "documentationUrl": "https://jan-adam.cz/llms.txt",
+    "logoUrl": "https://jan-adam.cz/logo.svg"
   },
   "entries": [
     {
-      "identifier": "urn:air:ejdy.cz:agent:jan-adam",
+      "identifier": "urn:air:jan-adam.cz:agent:jan-adam",
       "displayName": "Jan Adam – Webový asistent a kontaktní rozhraní",
       "type": "application/agent-card+json",
-      "url": "https://ejdy.cz/.well-known/agent-card.json",
+      "url": "https://jan-adam.cz/.well-known/agent-card.json",
       "description": "Agent Card vývojáře Jana Adama s přehledem nabízených služeb, specializací a kontaktních možností pro AI agenty a registry.",
       "representativeQueries": [
         "kontaktovat vývojáře Jan Adam",
@@ -21,23 +21,23 @@
       ]
     },
     {
-      "identifier": "urn:air:ejdy.cz:skills:portfolio",
+      "identifier": "urn:air:jan-adam.cz:skills:portfolio",
       "displayName": "Jan Adam – Vývojářské dovednosti a reference",
       "type": "text/markdown; profile=\"urn:air:agent-skills\"",
-      "url": "https://ejdy.cz/llms.txt",
+      "url": "https://jan-adam.cz/llms.txt",
       "description": "Strukturovaný souhrn dovedností, technického stacku a referenčních projektů vývojáře pro LLM a autonomní agenty.",
       "representativeQueries": [
         "tvorba webových stránek Jan Adam",
         "zkušenosti React Next.js TypeScript vývojář",
-        "portfolio projektů Jan Adam ejdy",
+        "portfolio projektů Jan Adam",
         "freelance programátor"
       ]
     },
     {
-      "identifier": "urn:air:ejdy.cz:skills:full-documentation",
+      "identifier": "urn:air:jan-adam.cz:skills:full-documentation",
       "displayName": "Jan Adam – Kompletní dokumentace projektů a stacku",
       "type": "text/markdown; profile=\"urn:air:agent-skills\"",
-      "url": "https://ejdy.cz/llms-full.txt",
+      "url": "https://jan-adam.cz/llms-full.txt",
       "description": "Detailní dokumentace referenčních projektů (Meteostanice, Správa ročníkových projektů SRP, Taskify), architektury, legislativy a kontaktních údajů.",
       "representativeQueries": [
         "IoT meteostanice webová aplikace Next.js",
