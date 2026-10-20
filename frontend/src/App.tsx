@@ -67,7 +67,7 @@ export default function App() {
                 <Hero />
                 <About />
                 <Projects />
-                <Contact onNavigate={navigate} />
+                <Contact />
               </>
             )}
           </Suspense>

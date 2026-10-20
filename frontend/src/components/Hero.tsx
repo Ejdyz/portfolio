@@ -46,7 +46,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
         >
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-foreground via-chart-1 to-chart-2 bg-clip-text text-transparent font-bold tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight md:leading-tight lg:leading-snug pb-2 bg-gradient-to-r from-foreground via-chart-1 to-chart-2 bg-clip-text text-transparent font-bold tracking-tight"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
