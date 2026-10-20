@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "name": "Jan Adam – Web Dev & Agentic Card",
+  "description": "Digitální vizitka a asistent vývojáře Jana Adama pro poptávky tvorby moderních webových aplikací, konzultace a přehled referenčních projektů.",
+  "version": "1.0.0",
+  "url": "https://ejdy.cz",
+  "provider": {
+    "name": "Jan Adam",
+    "url": "https://ejdy.cz"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "web-development-inquiry",
+      "name": "Poptávka tvorby webu a aplikací",
+      "description": "Konzultace a poptávka zakázkového vývoje webových aplikací (React, Next.js, TypeScript, Tailwind CSS).",
+      "url": "https://ejdy.cz/#contact"
+    },
+    {
+      "id": "portfolio-overview",
+      "name": "Přehled referencí a dovedností",
+      "description": "Strukturovaný přehled technického stacku, zkušeností a dokončených projektů (Meteostanice, SRP, Taskify).",
+      "url": "https://ejdy.cz/llms.txt"
+    }
+  ],
+  "defaultInputModes": ["text"],
+  "defaultOutputModes": ["text"]
+}
+

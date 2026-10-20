@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/ards-project/ard-spec/main/spec/schemas/ai-catalog.schema.json",
   "specVersion": "1.0",
   "host": {
     "displayName": "Jan Adam – Vývoj webových aplikací & UI/UX design",
@@ -9,60 +8,42 @@
   },
   "entries": [
     {
-      "identifier": "urn:air:ejdy.cz:portfolio:jan-adam",
-      "displayName": "Jan Adam – Webové portfolio",
-      "type": "text/markdown",
-      "url": "https://ejdy.cz/llms.txt",
-      "description": "Webové portfolio full-stack vývojáře, přehled technologií, referenční projekty a kontaktní kanály.",
-      "representativeQueries": [
-        "tvorba webových stránek Jan Adam",
-        "freelance React Next.js TypeScript programátor Česko",
-        "zakázkový vývoj webových aplikací",
-        "portfolio vývojáře Jan Adam ejdy"
-      ]
-    },
-    {
-      "identifier": "urn:air:ejdy.cz:project:weather-station",
-      "displayName": "Meteostanice (Weather Station)",
-      "type": "text/html",
-      "url": "https://weather.ejdy.cz",
-      "description": "Kompletní IoT meteorologická stanice a webová aplikace pro real-time sledování počasí.",
-      "representativeQueries": [
-        "IoT meteostanice webová aplikace",
-        "Next.js Prisma meteostanice reálný čas"
-      ]
-    },
-    {
-      "identifier": "urn:air:ejdy.cz:project:srp-management",
-      "displayName": "Správa ročníkových projektů (SRP)",
-      "type": "text/html",
-      "url": "https://test.srp.spsul.cz",
-      "description": "Bezpečná webová platforma pro správu školních projektů, termínů a hodnocení.",
-      "representativeQueries": [
-        "školní systém správy ročníkových projektů",
-        "školní informační systém Next.js Prisma"
-      ]
-    },
-    {
-      "identifier": "urn:air:ejdy.cz:project:taskify",
-      "displayName": "Taskify – Správce úkolů s AI",
-      "type": "text/html",
-      "url": "https://taskify.ejdy.cz",
-      "description": "Webová aplikace pro správu úkolů a produktivitu s asistencí umělé inteligence.",
-      "representativeQueries": [
-        "aplikace pro správu úkolů s umělou inteligencí",
-        "produktivní nástroj Next.js MagicUI"
-      ]
-    },
-    {
-      "identifier": "urn:air:ejdy.cz:service:contact",
-      "displayName": "Kontakt a poptávka služeb",
-      "type": "text/html",
-      "url": "https://ejdy.cz/#contact",
-      "description": "Poptávkový a kontaktní formulář pro spolupráci a zakázkový vývoj s Janem Adamem.",
+      "identifier": "urn:air:ejdy.cz:agent:jan-adam",
+      "displayName": "Jan Adam – Webový asistent a kontaktní rozhraní",
+      "type": "application/agent-card+json",
+      "url": "https://ejdy.cz/.well-known/agent-card.json",
+      "description": "Agent Card vývojáře Jana Adama s přehledem nabízených služeb, specializací a kontaktních možností pro AI agenty a registry.",
       "representativeQueries": [
         "kontaktovat vývojáře Jan Adam",
-        "poptávka tvorby webu nebo frontendové aplikace"
+        "poptávka tvorby webu React Next.js",
+        "freelance frontend vývojář Česko",
+        "zakázkový vývoj webových stránek"
+      ]
+    },
+    {
+      "identifier": "urn:air:ejdy.cz:skills:portfolio",
+      "displayName": "Jan Adam – Vývojářské dovednosti a reference",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://ejdy.cz/llms.txt",
+      "description": "Strukturovaný souhrn dovedností, technického stacku a referenčních projektů vývojáře pro LLM a autonomní agenty.",
+      "representativeQueries": [
+        "tvorba webových stránek Jan Adam",
+        "zkušenosti React Next.js TypeScript vývojář",
+        "portfolio projektů Jan Adam ejdy",
+        "freelance programátor"
+      ]
+    },
+    {
+      "identifier": "urn:air:ejdy.cz:skills:full-documentation",
+      "displayName": "Jan Adam – Kompletní dokumentace projektů a stacku",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://ejdy.cz/llms-full.txt",
+      "description": "Detailní dokumentace referenčních projektů (Meteostanice, Správa ročníkových projektů SRP, Taskify), architektury, legislativy a kontaktních údajů.",
+      "representativeQueries": [
+        "IoT meteostanice webová aplikace Next.js",
+        "školní systém správy ročníkových projektů SRP",
+        "Taskify správa úkolů s umělou inteligencí",
+        "architektura projektů Jan Adam"
       ]
     }
   ]
