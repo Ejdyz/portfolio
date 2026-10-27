@@ -26,7 +26,7 @@ export function Projects() {
     },
     {
       title: 'Taskify',
-      description: 'Aplikace pro správu úkolů a osobní produktivitu s přehledným rozhraním a asistencí AI.',
+      description: 'Aplikace pro správu úkolů a osobní produktivitu s přehledným rozhraním.',
       image: '/taskify.webp',
       tags: ['Next.js', 'MagicUI', 'TypeScript', 'Tailwind'],
       date: '2025',
