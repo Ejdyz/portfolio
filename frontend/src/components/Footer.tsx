@@ -34,7 +34,7 @@ export function Footer({ onNavigate }: FooterProps) {
               {BUSINESS_INFO.name}
             </h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Full Stack webový vývojář &amp; UI/UX designer.<br />
+              Frontend webový vývojář &amp; UI/UX designer.<br />
               Zakázkový vývoj moderních webů, frontendových aplikací a digitálních produktů.
             </p>
             <div className="pt-2 text-xs space-y-1 text-muted-foreground/90">

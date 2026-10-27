@@ -66,7 +66,7 @@ export function Hero() {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="block"
             >
-              Full Stack Vývojář
+              Frontend Vývojář
             </motion.span>
             <motion.span
               initial={{ y: 20 }}

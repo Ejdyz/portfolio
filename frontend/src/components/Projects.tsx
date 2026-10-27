@@ -9,9 +9,9 @@ export function Projects() {
     {
       title: 'Meteostanice (Weather Station)',
       description: 'Kompletní meteorologické řešení s vlastní hardwarovou stanicí, serverem a webovou aplikací pro zobrazení naměřených dat v reálném čase.',
-      image: '/weather-station.webp',
+      image: '/weather-station-banner.webp',
       tags: ['Next.js', 'Prisma', 'TypeScript', 'ShadCN', 'Tailwind'],
-      date: '2023–2025',
+      date: '2023–2026',
       github: 'https://github.com/Ejdyz/weather-station',
       demo: 'https://weather.ejdy.cz',
       featured: true
@@ -20,10 +20,8 @@ export function Projects() {
       title: 'Správa ročníkových projektů (SRP)',
       description: 'Zabezpečená webová aplikace pro studenty a pedagogy pro efektivní správu projektů, termínů, hodnocení a obhajob.',
       image: '/srp-banner.webp',
-      tags: ['KODEXIA', 'Next.js', 'JavaScript', 'Tailwind', 'HeroUI', 'Prisma'],
-      date: '2023–2025',
-      github: 'https://github.com/Kodexia',
-      demo: 'https://test.srp.spsul.cz',
+      tags: ['KODEXIA', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind', 'Prisma'],
+      date: '2023–2026',
       featured: true
     },
     {
@@ -42,7 +40,7 @@ export function Projects() {
       image: '/quiznfun.webp',
       tags: ['Next.js', 'TypeScript', 'HeroUI', 'PostgreSQL'],
       date: '2023',
-      github: 'https://github.com/Kodexia/QuiznFun',
+      //github: 'https://github.com/Kodexia/QuiznFun',
       demo: 'https://quiznfun.ejdy.cz',
       featured: false
     },
@@ -168,21 +166,26 @@ export function Projects() {
                       </motion.span>
                     ))}
                   </div>
-                  
-                  <div className="flex space-x-4">
-                    <Button variant="outline" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Zdrojový kód
-                      </a>
-                    </Button>
-                    <Button asChild>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Živé demo
-                      </a>
-                    </Button>
-                  </div>
+                  {(project.github || project.demo) && (
+                    <div className="flex space-x-4">
+                      {project.github && (
+                        <Button variant="outline" asChild>
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4 mr-2" />
+                            Zdrojový kód
+                          </a>
+                        </Button>
+                      )}
+                      {project.demo && (
+                        <Button asChild>
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Živé demo
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </motion.div>
